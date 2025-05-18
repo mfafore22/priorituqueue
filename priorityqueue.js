@@ -33,7 +33,7 @@ class PriorityQueue{
    }
    
    }
-   remove(item){
+   remove(){
     if (this.isEmpty()){
         return "the queue is underflow";
     }
@@ -58,6 +58,11 @@ pq.add([3, 'Task C']);
 pq.add([1, 'Task A']);
 pq.add([2, 'Task B']);
 
+console.log("Before remove:", pq.queue);
+
+const remove = pq.remove()
+console.log("Removed:", remove);
+console.log("After remove:", pq.queue);
 console.log("Peek:", pq.peek());
 console.log("Dequeued:", pq.remove());
 console.log("Now:", pq.queue);
