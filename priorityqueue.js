@@ -31,12 +31,14 @@ class PriorityQueue{
     this.queue.push(item);
     console.log("Pushed to end", item);
    }
+   this.nItem++;
    
    }
    remove(){
     if (this.isEmpty()){
-        return "the queue is underflow";
+        return this.nItem === 0;
     }
+    this.nItem--;
     return this.queue.shift();
    }
    peek(index){
